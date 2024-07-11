@@ -12,11 +12,9 @@ export default function InputArea({ saveInputValuesHandler }) {
     });
 
     function updateInputs(propertyName, propertyValue, maxAllowedValue) {
-        const value = Math.min(Number(maxAllowedValue), Number(propertyValue))
-
         updateInputvalues((oldValues) => {
             return {
-                ...oldValues, [propertyName]: parseInt(value)
+                ...oldValues, [propertyName]: Math.max(0,Math.min(maxAllowedValue, propertyValue))
             };
         })
     }

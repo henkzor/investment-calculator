@@ -5,11 +5,7 @@ import ResultArea from "./ResultArea/ResultArea"
 
 export default function CalculationArea() {
 
-    const [inputValues, setInputValues] = useState({        
-        initialInvestment: 1000,
-        yearlyInvestment: 100,
-        expectedReturnRate: 4,
-        numberOfYears: 3})
+    const [inputValues, setInputValues] = useState()
 
     function saveInputValues(inputObject)
     {
@@ -24,7 +20,7 @@ export default function CalculationArea() {
     return (
         <div>
             <InputArea saveInputValuesHandler={saveInputValues} />
-            <ResultArea inputValues={inputValues}/>
+            <ResultArea inputValues={inputValues}  /> 
         </div>
     )
 };

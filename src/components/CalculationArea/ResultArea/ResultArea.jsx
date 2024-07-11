@@ -8,7 +8,7 @@ export default function ResultArea({ inputValues }) {
 
     let investmentResultsArray = []
 
-    if (inputValues.initialInvestment) {
+    if (inputValues) {
         investmentResultsArray = calculateInvestmentResults({
             "initialInvestment": inputValues.initialInvestment, 
             "annualInvestment": inputValues.yearlyInvestment, 
